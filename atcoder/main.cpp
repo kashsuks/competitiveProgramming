@@ -32,7 +32,7 @@ ll modExp(ll base, ll exp, ll mod) {
 class Solution {
 public:
     void solve() {
-        std::cout ""
+        //Put actual code here bru
     }
 };
 
