@@ -1,91 +1,44 @@
+/*
+Author: kashsuks
+*/
+
 #include <bits/stdc++.h>
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
-#include <sstream>
-#include <set>
-#include <map>
-#include <unordered_map>
-#include <unordered_set>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <numeric>
-#include <cmath>
-#include <functional>
-#include <bitset>
-#include <limits>
-#include <iomanip>
-#include <tuple>
 
 using namespace std;
 
-// Start of Kashyap Sukshavasi's template for CP
-#define fast_io ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+void dbg_out() { cerr << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+#ifdef LOCAL
+#define dbg(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#else
+#define dbg(...)
+#endif
+
+#define ar array
 #define ll long long
-#define vi vector<int>
-#define vll vector<long long>
-#define pii pair<int, int>
-#define pll pair<long long, long long>
-#define all(x) x.begin(), x.end()
-#define F first
-#define S second
+#define ld long double
+#define sza(x) ((int)x.size())
+#define all(a) (a).begin(), (a).end()
 
-ll gcd(ll a, ll b) { return b == 0 ? a : gcd(b, a % b); }
-ll lcm(ll a, ll b) { return (a / gcd(a, b)) * b; }
-bool isPrime(int n) {
-    if (n <= 1) return false;
-    for (int i = 2; i * i <= n; i++) {
-        if (n % i == 0) return false;
-    }
-    return true;
-}
-ll modExp(ll base, ll exp, ll mod) {
-    ll result = 1;
-    while (exp > 0) {
-        if (exp & 1) result = (result * base) % mod;
-        base = (base * base) % mod;
-        exp >>= 1;
-    }
-    return result;
-}
-// End of Kashyap Sukshavasi's template for CP
+const int MAX_N = 1e5 + 5;
+const ll MOD = 1e9 + 7;
+const ll INF = 1e9;
+const ld EPS = 1e-9;
 
-vector<int> read_ints() {
-    string line;
-    getline(cin, line);
-    istringstream iss(line);
-    vector<int> numbers;
-    int num;
-    while (iss >> num) {
-        numbers.push_back(num);
-    }
-    return numbers;
-}
-
-// Function to print a vector of integers
-void print_vector(const vector<int>& vec) {
-    for (int i = 0; i < vec.size(); ++i) {
-        cout << vec[i];
-        if (i < vec.size() - 1) {
-            cout << " ";
-        }
-    }
-    cout << "\n";
+void solve() {
+    
 }
 
 int main() {
-    fast_io;
-    
-    int t;
-    cin >> t;
-    cin.ignore();
-    
-    while (t--) {
-        vector<int> numbers = read_ints();
-        print_vector(numbers);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0); 
+    cout.tie(0);
+    int tc = 1;
+    // cin >> tc;
+    for (int t = 1; t <= tc; t++) {
+        // cout << "Case #" << t << ": ";
+        solve();
     }
-    
-    return 0;
 }
